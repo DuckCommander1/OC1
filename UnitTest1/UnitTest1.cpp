@@ -12,25 +12,23 @@ namespace UnitTest1
 	TEST_CLASS(UnitTest1)
 	{
 	public:
-		
-		//Я попытался, но почему-то я получаю разные ответы в тесте и в .exe! Магия :)
-		// 
-		//TEST_METHOD(TestMethod1)
-		//{
-		//	int expectedMin = 5;
-		//	int testArray[] = { 5, 10, 54, 9999, 7 };
+		 
+		TEST_METHOD(TestMethod1)
+		{
+			int expectedMin = 5;
+			int testArray[] = { 5, 10, 54, 9999, 7 };
 
-		//	std::stringstream input("5 5 10 54 9999 7");
-		//	std::stringstream output;
+			std::stringstream input("5 5 10 54 9999 7");
+			std::stringstream output;
 
-		//	cin.rdbuf(input.rdbuf());
-		//	cout.rdbuf(output.rdbuf());
-		//	int a = main();
-		//	
-		//	int res = stoi(output.str().substr(33));
+			cin.rdbuf(input.rdbuf());
+			cout.rdbuf(output.rdbuf());
+			int a = main();
+			
+			int res = stoi(output.str().substr(33));
 
-		//	Assert::AreEqual(expectedMin, res);
-		//}
+			Assert::AreEqual(expectedMin, res);
+		}
 
 		TEST_METHOD(TestMethod2) {
 			int expectedMin = -98;
